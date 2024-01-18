@@ -80,7 +80,7 @@ export default function WithSubnavigation() {
 
 const DesktopNav = () => {
   const linkColor = useColorModeValue('white', 'gray.200')
-  const linkHoverColor = useColorModeValue('red.100', 'white')
+  const linkHoverColor = useColorModeValue('black', 'white')
   const popoverContentBgColor = useColorModeValue('white', 'gray.800')
 
   return (

@@ -33,6 +33,7 @@ export default function Home() {
             alt="Yujo Brand Logo Mobile"
             width={300}
             height= {300}
+            priority
             placeholder="blur"
             blurDataURL={getCloudinaryImageBlur('yujo9.svg')}
             /> 
