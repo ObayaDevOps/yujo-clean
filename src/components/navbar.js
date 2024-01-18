@@ -182,7 +182,7 @@ const MobileNavItem = ({ label, children, href }) => {
           textDecoration: 'none',
         }}
         >
-        <Text fontWeight={600} color={useColorModeValue('gray.600', 'gray.200')} fontFamily={'Helvetica'}>
+        <Text fontWeight={600}  fontSize={'lg'} color={useColorModeValue('gray.600', 'gray.200')}      fontFamily={'noto'} >
           {label}
         </Text>
         {children && (

@@ -27,7 +27,7 @@ export default function Home() {
         </Box>
 
 
-        <AbsoluteCenter>
+        <AbsoluteCenter mt={{base: -10, md: 0}}>
           <Image
             src={getCloudinaryImage('yujo9.svg')} 
             alt="Yujo Brand Logo"
