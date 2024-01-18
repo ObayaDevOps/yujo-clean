@@ -3,10 +3,13 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
-import { Heading, Text, Box,AbsoluteCenter, Container, VStack, SimpleGrid, Center, Button, AspectRatio, Alert, AlertIcon, useToast } from '@chakra-ui/react'
+import { Heading, Flex, Text, Box,AbsoluteCenter, Container, VStack, SimpleGrid, Center, Button, AspectRatio, Alert, AlertIcon, useToast } from '@chakra-ui/react'
 import { getCloudinaryImage, getCloudinaryImageBlur } from '../util/cloudinaryImageRetreival';
 
 import Navbar from '../components/navbar'
+
+import Marquee from "react-fast-marquee";
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,7 +30,7 @@ export default function Home() {
         </Box>
 
 
-        <AbsoluteCenter mt={{base: -10, md: 0}}>
+        <AbsoluteCenter mt={{base: -5, md: 0}}>
           <Image
             src={getCloudinaryImage('yujo9.svg')} 
             alt="Yujo Brand Logo"
@@ -39,6 +42,27 @@ export default function Home() {
             blurDataURL={getCloudinaryImageBlur('yujo9.svg')}
             /> 
         </AbsoluteCenter>
+
+
+        <Flex 
+        position='absolute'
+        bottom={0}
+        >
+          <Marquee
+            speed={85}
+            pauseOnHover
+          >
+            <Text fontSize={'8xl'} 
+            fontFamily={'noto'}
+            fontWeight={600}
+            color={'white'}
+            >
+              いらっしゃいませ! Welcome to Yujo Izakaya  カンパラで最高の日本食レストラン！    
+              
+            </Text>
+          </Marquee>
+        </Flex>
+
         
       </Box>
 
