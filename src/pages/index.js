@@ -30,7 +30,7 @@ export default function Home() {
         <AbsoluteCenter>
           <Image
             src={getCloudinaryImage('yujo9.svg')} 
-            alt="Yujo Brand Logo Mobile"
+            alt="Yujo Brand Logo"
             width={300}
             height= {300}
             priority

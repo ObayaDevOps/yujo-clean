@@ -225,10 +225,12 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: 'Food',
-    href: '#',
+    href: '/menus/food-menu',
     
   },
   {
     label: 'Drinks',
+    href: '/menus/food-menu',
+
   },
 ]
