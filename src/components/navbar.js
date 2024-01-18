@@ -43,7 +43,7 @@ export default function WithSubnavigation() {
           display={{ base: 'flex', md: 'none' }}>
           <IconButton
             onClick={onToggle}
-            icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} color={'black'} />}
+            icon={isOpen ? <CloseIcon w={8} h={8} color={'white'} /> : <HamburgerIcon w={8} h={8} color={'white'} />}
             variant={'ghost'}
             aria-label={'Toggle Navigation'}
           />
@@ -80,22 +80,23 @@ export default function WithSubnavigation() {
 
 const DesktopNav = () => {
   const linkColor = useColorModeValue('white', 'gray.200')
-  const linkHoverColor = useColorModeValue('black', 'white')
+  const linkHoverColor = useColorModeValue('black', 'red')
   const popoverContentBgColor = useColorModeValue('white', 'gray.800')
 
   return (
-    <Stack direction={'row'} spacing={4}>
+    <Stack direction={'row'} spacing={12} mt={4}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
-              <Box
+              <Button
                 as="a"
-                p={2}
+                p={4}
                 href={navItem.href ?? '#'}
-                fontSize={'sm'}
-                fontWeight={500}
+                fontSize={'lg'}
+                fontWeight={600}
                 color={linkColor}
+                variant ='ghost'
                 _hover={{
                   textDecoration: 'none',
                   color: linkHoverColor,
@@ -103,7 +104,7 @@ const DesktopNav = () => {
                 fontFamily={'Arial'}
                 >
                 {navItem.label}
-              </Box>
+              </Button>
             </PopoverTrigger>
 
             {navItem.children && (
