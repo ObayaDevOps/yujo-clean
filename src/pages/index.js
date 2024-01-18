@@ -51,13 +51,14 @@ export default function Home() {
           <Marquee
             speed={85}
             pauseOnHover
+            // gradientColor={'rgba(248, 251, 253, 1)', 'rgba(248, 251, 253, 0)'}
           >
             <Text fontSize={'8xl'} 
             fontFamily={'noto'}
             fontWeight={600}
             color={'white'}
             >
-              いらっしゃいませ! Welcome to Yujo Izakaya  カンパラで最高の日本食レストラン！    
+              いらっしゃいませ!   カンパラで最高の日本食レストラン！    
               
             </Text>
           </Marquee>
