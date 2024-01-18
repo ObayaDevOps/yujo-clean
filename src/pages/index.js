@@ -20,7 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <Box bg={'red'} minH={'100vh'}>
+      <Box bg={'red.600'} minH={'100vh'}>
 
         <Box>
           <Navbar />
