@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
-import { Heading, Box,AbsoluteCenter, Container, VStack, SimpleGrid, Center, Button, AspectRatio, Alert, AlertIcon, useToast } from '@chakra-ui/react'
+import { Heading, Text, Box,AbsoluteCenter, Container, VStack, SimpleGrid, Center, Button, AspectRatio, Alert, AlertIcon, useToast } from '@chakra-ui/react'
 import { getCloudinaryImage, getCloudinaryImageBlur } from '../util/cloudinaryImageRetreival';
 
 import Navbar from '../components/navbar'
@@ -35,6 +35,7 @@ export default function Home() {
             height= {300}
             priority
             placeholder="blur"
+            
             blurDataURL={getCloudinaryImageBlur('yujo9.svg')}
             /> 
         </AbsoluteCenter>

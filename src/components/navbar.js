@@ -86,7 +86,7 @@ const DesktopNav = () => {
   return (
     <Stack direction={'row'} spacing={12} mt={4}>
       {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
+        <Box key={navItem.label} >
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
               <Button
@@ -101,7 +101,7 @@ const DesktopNav = () => {
                   textDecoration: 'none',
                   color: linkHoverColor,
                 }}
-                fontFamily={'Arial'}
+                fontFamily={'noto'}
                 >
                 {navItem.label}
               </Button>
