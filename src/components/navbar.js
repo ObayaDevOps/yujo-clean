@@ -23,6 +23,8 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons'
 
+import NextLink from 'next/link'
+
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
 
@@ -82,22 +84,24 @@ const DesktopNav = () => {
         <Box key={navItem.label} >
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
-              <Button
-                as="a"
-                p={4}
-                href={navItem.href ?? '#'}
-                fontSize={'lg'}
-                fontWeight={600}
-                color={linkColor}
-                variant ='ghost'
-                _hover={{
-                  textDecoration: 'none',
-                  color: linkHoverColor,
-                }}
-                fontFamily={'noto'}
-                >
-                {navItem.label}
-              </Button>
+              <NextLink href={navItem.href ?? '#'} >
+                <Button
+                  // as="a"
+                  p={4}
+                  // href={navItem.href ?? '#'}
+                  fontSize={'lg'}
+                  fontWeight={600}
+                  color={linkColor}
+                  variant ='ghost'
+                  _hover={{
+                    textDecoration: 'none',
+                    color: linkHoverColor,
+                  }}
+                  fontFamily={'noto'}
+                  >
+                  {navItem.label}
+                </Button>
+              </NextLink>
             </PopoverTrigger>
 
             {navItem.children && (
@@ -173,18 +177,18 @@ const MobileNavItem = ({ label, children, href }) => {
   return (
     <Stack spacing={4} onClick={children && onToggle}>
       <Box
-        py={2}
-        as="a"
-        href={href ?? '#'}
+        py={2}        
         justifyContent="space-between"
         alignItems="center"
         _hover={{
           textDecoration: 'none',
         }}
         >
+        <NextLink href={href ?? '#'}>
         <Text fontWeight={600}  fontSize={'lg'} color={useColorModeValue('gray.600', 'gray.200')}      fontFamily={'noto'} >
           {label}
         </Text>
+        </NextLink>
         {children && (
           <Icon
             as={ChevronDownIcon}
@@ -218,12 +222,12 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
-    label: 'Food',
+    label: 'Food Menu',
     href: '/food',
     
   },
   {
-    label: 'Drinks',
+    label: 'Drinks Menu',
     href: '/drinks',
 
   },

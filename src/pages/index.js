@@ -7,6 +7,8 @@ import { Heading, Text, Box,AbsoluteCenter, Container, VStack, SimpleGrid, Cente
 import { getCloudinaryImage, getCloudinaryImageBlur } from '../util/cloudinaryImageRetreival';
 
 import Navbar from '../components/navbar'
+import NextLink from 'next/link'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,16 +30,18 @@ export default function Home() {
 
 
         <AbsoluteCenter mt={{base: -10, md: 0}}>
-          <Image
-            src={getCloudinaryImage('yujo9.svg')} 
-            alt="Yujo Brand Logo"
-            width={300}
-            height= {300}
-            priority
-            placeholder="blur"
-            
-            blurDataURL={getCloudinaryImageBlur('yujo9.svg')}
-            /> 
+          <NextLink href='/about'>
+            <Image
+              src={getCloudinaryImage('yujo9.svg')} 
+              alt="Yujo Brand Logo"
+              width={300}
+              height= {300}
+              priority
+              placeholder="blur"
+              
+              blurDataURL={getCloudinaryImageBlur('yujo9.svg')}
+              />
+            </NextLink>
         </AbsoluteCenter>
         
       </Box>
