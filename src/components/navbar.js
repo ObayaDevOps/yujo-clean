@@ -214,16 +214,15 @@ const MobileNavItem = ({ label, children, href }) => {
         )}
       </Box>
 
-      <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
+      <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }} zIndex={999}>
         <Stack
-          mt={2}
+          // mt={2}
           pl={4}
-          borderLeft={1}
-          borderStyle={'solid'}
-          borderColor={useColorModeValue('white', 'gray.700')}
           fontFamily='bubblyNavBarFont'
           color='white'
-          align={'start'}>
+          align={'start'}
+          fontSize={'xl'}
+          >
           {children &&
             children.map((child) => (
               <Box as="a" key={child.label} py={2} href={child.href} >

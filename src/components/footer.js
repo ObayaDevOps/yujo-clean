@@ -22,45 +22,7 @@ import {
 
   import Image from 'next/image'
   import NextLink from 'next/link'
-  // import africaIcon from '../../public/images/icon/africa.png'
-  // import africaIconWhite from '../../public/images/icon/africa-white-icon.png'
-  // import coffee from '../../public/images/icon/buy-me-a-coffee.png'
-  
-  const SocialButton = ({
-    children,
-    label,
-    href,
-  }) => {
-    return (
-      <chakra.button
-        bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-        rounded={'full'}
-        w={8}
-        h={8}
-        cursor={'pointer'}
-        as={'a'}
-        href={href}
-        display={'inline-flex'}
-        alignItems={'center'}
-        justifyContent={'center'}
-        transition={'background 0.3s ease'}
-        _hover={{
-          bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-        }}>
-        <VisuallyHidden>{label}</VisuallyHidden>
-        {children}
-      </chakra.button>
-    );
-  };
-  
-  const ListHeader = ({ children }) => {
-    return (
-      <Text fontWeight={'500'} fontSize={'lg'} mb={2} fontFamily={'Space Mono'}>
-        {children}
-      </Text>
-    );
-  };
-  
+
   export default function Footer() {
     const { hasCopied, onCopy } = useClipboard('reservations@yujo.ug');
 
@@ -70,20 +32,11 @@ import {
       <Box
         bg={useColorModeValue('blackAlpha.900', 'gray.800')}
         pt={2}
+        zIndex={999}
         >
 
 
               <Stack direction={'row'} spacing={6} p={2} >
-                {/* <SocialButton label={'Instagram'} href={'https://www.instagram.com/yujoizakaya/'}>
-                  <FaInstagram />
-                </SocialButton>
-                <SocialButton label={'Email'}  onClick={onCopy}>
-                  <HiOutlineMail />
-                </SocialButton>
-                <SocialButton label={'Phone'} href={'0708109856'}>
-                  <FaPhone />
-                </SocialButton> */}
-
                 <Tooltip
                     label={hasCopied ? 'Email Copied!' : 'Copy Email'}
                     closeOnClick={false}
