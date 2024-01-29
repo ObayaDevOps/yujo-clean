@@ -188,31 +188,31 @@ const MobileNavItem = ({ label, children, href }) => {
   return (
     <Stack spacing={4} onClick={children && onToggle}
     >
-      <Box
+      <Flex
         py={2}        
         justifyContent="space-between"
         alignItems="center"
         _hover={{
           textDecoration: 'none',
         }}
-
         >
-        <NextLink href={href ?? '#'}>
-        <Text fontWeight={600}  fontSize={'xl'} color={useColorModeValue('white', 'gray.200')}      fontFamily={'bubblyNavBarFont'} > 
+        <Text fontWeight={600}  
+        fontSize={'xl'} 
+        color={useColorModeValue('white', 'gray.200')}      
+        fontFamily={'bubblyNavBarFont'} > 
           {label}
         </Text>
-        </NextLink>
         {children && (
           <Icon
             as={ChevronDownIcon}
             color='white'
             transition={'all .25s ease-in-out'}
             transform={isOpen ? 'rotate(180deg)' : ''}
-            w={6}
-            h={6}
+            w={8}
+            h={8}
           />
         )}
-      </Box>
+      </Flex>
 
       <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }} zIndex={999}>
         <Stack
