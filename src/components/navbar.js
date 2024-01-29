@@ -29,22 +29,24 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
-    <Box>
+    <Box >
       <Flex
-        bg={useColorModeValue('red.600', 'gray.800')}
+        // bg={useColorModeValue('red.600', 'gray.800')}
+        // opacity
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderStyle={'solid'}
-        align={'center'}>
+        align={'center'}
+        >
         <Flex
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}>
+          display={{ base: 'flex', md: 'none' }}> 
           <IconButton
             onClick={onToggle}
-            icon={isOpen ? <CloseIcon w={8} h={8} color={'white'} /> : <HamburgerIcon w={8} h={8} color={'white'} />}
-            variant={'ghost'}
+            icon={isOpen ? <CloseIcon w={8} h={8} color={'red.600'} /> : <HamburgerIcon w={8} h={8} color={'red.600'} />}
+            variant={'solid'}
             aria-label={'Toggle Navigation'}
           />
         </Flex>
@@ -66,7 +68,7 @@ export default function WithSubnavigation() {
         </Stack>
       </Flex>
 
-      <Collapse in={isOpen} animateOpacity>
+      <Collapse in={isOpen} animateOpacity zIndex={999}>
         <MobileNav />
       </Collapse>
     </Box>
@@ -74,9 +76,9 @@ export default function WithSubnavigation() {
 }
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue('white', 'gray.200')
+  const linkColor = useColorModeValue('red.50', 'gray.200')
   const linkHoverColor = useColorModeValue('black', 'red')
-  const popoverContentBgColor = useColorModeValue('white', 'gray.800')
+  const popoverContentBgColor = useColorModeValue('red.50', 'gray.800')
 
   return (
     <Stack direction={'row'} spacing={12} mt={4}>
@@ -89,7 +91,7 @@ const DesktopNav = () => {
                   // as="a"
                   p={4}
                   // href={navItem.href ?? '#'}
-                  fontSize={'lg'}
+                  fontSize={'2xl'}
                   fontWeight={600}
                   color={linkColor}
                   variant ='ghost'
@@ -97,7 +99,7 @@ const DesktopNav = () => {
                     textDecoration: 'none',
                     color: linkHoverColor,
                   }}
-                  fontFamily={'noto'}
+                  fontFamily={'bubblyNavBarFont'}
                   >
                   {navItem.label}
                 </Button>
@@ -163,11 +165,13 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
 
 const MobileNav = () => {
   return (
-    <Stack bg={useColorModeValue('white', 'gray.800')} p={4} display={{ md: 'none' }}>
-      {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
-      ))}
-    </Stack>
+    <Box >
+      <Stack bg={useColorModeValue('red.900', 'gray.800')} p={4} display={{ md: 'none' }} >
+        {NAV_ITEMS.map((navItem) => (
+          <MobileNavItem key={navItem.label} {...navItem} />
+        ))}
+      </Stack>
+    </Box>
   )
 }
 
@@ -175,7 +179,8 @@ const MobileNavItem = ({ label, children, href }) => {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
-    <Stack spacing={4} onClick={children && onToggle}>
+    <Stack spacing={4} onClick={children && onToggle}
+    >
       <Box
         py={2}        
         justifyContent="space-between"
@@ -183,9 +188,12 @@ const MobileNavItem = ({ label, children, href }) => {
         _hover={{
           textDecoration: 'none',
         }}
+
         >
         <NextLink href={href ?? '#'}>
-        <Text fontWeight={600}  fontSize={'lg'} color={useColorModeValue('gray.600', 'gray.200')}      fontFamily={'noto'} >
+        <Text fontWeight={600}  fontSize={'xl'} color={useColorModeValue('red.50', 'gray.200')}      fontFamily={'bubblyNavBarFont'} >
+        {/* <Text fontWeight={600}  fontSize={'xl'} color={useColorModeValue('gray.600', 'gray.200')}      fontFamily={'rubik'} > */}
+ 
           {label}
         </Text>
         </NextLink>
@@ -210,7 +218,7 @@ const MobileNavItem = ({ label, children, href }) => {
           align={'start'}>
           {children &&
             children.map((child) => (
-              <Box as="a" key={child.label} py={2} href={child.href}>
+              <Box as="a" key={child.label} py={2} href={child.href} >
                 {child.label}
               </Box>
             ))}
@@ -221,6 +229,11 @@ const MobileNavItem = ({ label, children, href }) => {
 }
 
 const NAV_ITEMS = [
+  {
+    label: 'Home',
+    href: '/#',
+    
+  },
   {
     label: 'Food Menu',
     href: '/food',
@@ -234,6 +247,11 @@ const NAV_ITEMS = [
   {
     label: 'About',
     href: '/about',
+
+  },
+  {
+    label: 'Order from Us',
+    href: '/order',
 
   },
 ]

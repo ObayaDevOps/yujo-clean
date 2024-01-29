@@ -22,17 +22,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <Box bg={'red.600'} minH={'100vh'}>
+      <Box bg={'red.600'} minH={'98vh'} >
 
         <Box>
           <Navbar />
         </Box>
 
-
-        <AbsoluteCenter mt={{base: -10, md: 0}}>
+        <Box position='relative'>
+        {/* <AbsoluteCenter mt={{base: 40, md: 0}}> */}
+        <Box position='absolute' top='80%' left='50%'
+          transform={{base:'translate(-50%, 25vh)', md:'translate(-50%, 20vh)'}}  >
           <NextLink href='/about'>
             <Image
+              // src={getCloudinaryImage('yujo9.svg')} 
               src={getCloudinaryImage('yujo9.svg')} 
+
               alt="Yujo Brand Logo"
               width={300}
               height= {300}
@@ -41,8 +45,11 @@ export default function Home() {
               
               blurDataURL={getCloudinaryImageBlur('yujo9.svg')}
               />
+              
             </NextLink>
-        </AbsoluteCenter>
+            </Box>
+        {/* </AbsoluteCenter> */}
+        </Box>
         
       </Box>
 
