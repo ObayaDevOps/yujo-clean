@@ -68,7 +68,7 @@ import {
 
     return (
       <Box
-        bg={useColorModeValue('red.900', 'gray.800')}
+        bg={useColorModeValue('blackAlpha.900', 'gray.800')}
         pt={2}
         >
 
@@ -90,7 +90,7 @@ import {
                     hasArrow>
                     <IconButton
                       aria-label="email"
-                      color={'white'}
+                      color={'red.50'}
                       variant="ghost"
                       size="lg"
                       fontSize="xl"
@@ -106,11 +106,10 @@ import {
 
 
                     <IconButton
-                      aria-label="email"
+                      aria-label="Instagram"
                       variant="ghost"
-                      color={'white'}
-
-                      size="xl"
+                      color={'red.50'}
+                      size="lg"
                       fontSize="xl"
                       icon={<FaInstagram />}
                       _hover={{

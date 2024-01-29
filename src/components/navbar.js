@@ -31,8 +31,6 @@ export default function WithSubnavigation() {
   return (
     <Box >
       <Flex
-        // bg={useColorModeValue('red.600', 'gray.800')}
-        // opacity
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -68,7 +66,7 @@ export default function WithSubnavigation() {
         </Stack>
       </Flex>
 
-      <Collapse in={isOpen} animateOpacity zIndex={999}>
+      <Collapse in={isOpen} animateOpacity zIndex={9999}>
         <MobileNav />
       </Collapse>
     </Box>
@@ -166,7 +164,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
 const MobileNav = () => {
   return (
     <Box >
-      <Stack bg={useColorModeValue('red.900', 'gray.800')} p={4} display={{ md: 'none' }} >
+      <Stack bg={useColorModeValue('blackAlpha.800', 'gray.800')} p={4} display={{ md: 'none' }} >
         {NAV_ITEMS.map((navItem) => (
           <MobileNavItem key={navItem.label} {...navItem} />
         ))}
