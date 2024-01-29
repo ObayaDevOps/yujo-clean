@@ -19,6 +19,7 @@ import {
 
   import { IoMdPlanet } from 'react-icons/io';
   import { HiOutlineMail } from 'react-icons/hi';  
+  import { RiMapPinLine } from "react-icons/ri";
 
   import Image from 'next/image'
   import NextLink from 'next/link'
@@ -74,9 +75,25 @@ import {
                       isRound
                     />
 
+                  <IconButton
+                    as='a'
+                      aria-label="Maps"
+                      variant="ghost"
+                      color={'red.50'}
+                      size="lg"
+                      fontSize="xl"
+                      href={'https://maps.app.goo.gl/RT3ZEuogVDjsqX818'}
+                      icon={<RiMapPinLine />}
+                      _hover={{
+                        bg: 'red.500',
+                        color: useColorModeValue('white', 'gray.700'),
+                      }}
+                      isRound
+                    />
+
                     
 
-                <Stack marginLeft='auto' marginRight='0' >
+                <Stack marginLeft='auto' marginRight='0' pb={2}>
                   <Text
                   fontFamily={'bubblyNavBarFont'}
                   fontSize={'sm'}
