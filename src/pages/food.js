@@ -27,7 +27,7 @@ export default function FoodMenu() {
 
 // https://stackoverflow.com/questions/36382249/embed-pdf-in-mobile-browsers
     return (
-      <Box bg={'red.600'}>
+      <Box bg={'red.600'} minHeight={'100vh'}>
         <Navbar />
 
         <object data="yujo_food_menu.pdf" type="application/pdf" frameBorder="0" width="100%" height="100%" >
