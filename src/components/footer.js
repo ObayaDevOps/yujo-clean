@@ -106,17 +106,18 @@ import {
 
 
                     <IconButton
+                    as='a'
                       aria-label="Instagram"
                       variant="ghost"
                       color={'red.50'}
                       size="lg"
                       fontSize="xl"
+                      href={'https://www.instagram.com/yujoizakaya/'}
                       icon={<FaInstagram />}
                       _hover={{
                         bg: 'red.500',
                         color: useColorModeValue('white', 'gray.700'),
                       }}
-                      onClick={onCopy}
                       isRound
                     />
 
