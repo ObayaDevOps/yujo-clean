@@ -90,7 +90,7 @@ const DesktopNav = () => {
                   // as="a"
                   p={4}
                   // href={navItem.href ?? '#'}
-                  fontSize={'2xl'}
+                  fontSize={'xl'}
                   fontWeight={600}
                   color={linkColor}
                   variant ='ghost'
@@ -198,6 +198,8 @@ const MobileNavItem = ({ label, children, href }) => {
         >
         <Text fontWeight={600}  
         fontSize={'xl'} 
+        as="a"
+        href={href}
         color={useColorModeValue('white', 'gray.200')}      
         fontFamily={'bubblyNavBarFont'} > 
           {label}
