@@ -189,15 +189,14 @@ const MobileNavItem = ({ label, children, href }) => {
 
         >
         <NextLink href={href ?? '#'}>
-        <Text fontWeight={600}  fontSize={'xl'} color={useColorModeValue('red.50', 'gray.200')}      fontFamily={'bubblyNavBarFont'} >
-        {/* <Text fontWeight={600}  fontSize={'xl'} color={useColorModeValue('gray.600', 'gray.200')}      fontFamily={'rubik'} > */}
- 
+        <Text fontWeight={600}  fontSize={'xl'} color={useColorModeValue('white', 'gray.200')}      fontFamily={'bubblyNavBarFont'} > 
           {label}
         </Text>
         </NextLink>
         {children && (
           <Icon
             as={ChevronDownIcon}
+            color='white'
             transition={'all .25s ease-in-out'}
             transform={isOpen ? 'rotate(180deg)' : ''}
             w={6}
@@ -212,7 +211,9 @@ const MobileNavItem = ({ label, children, href }) => {
           pl={4}
           borderLeft={1}
           borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.700')}
+          borderColor={useColorModeValue('white', 'gray.700')}
+          fontFamily='bubblyNavBarFont'
+          color='white'
           align={'start'}>
           {children &&
             children.map((child) => (
@@ -249,7 +250,15 @@ const NAV_ITEMS = [
   },
   {
     label: 'Order from Us',
-    href: '/order',
-
+    children: [
+      {
+        label: 'Glovo',
+        href: 'https://glovoapp.com/ug/en/kampala/yujo-izakaya-kpa/',
+      },
+      {
+        label: 'Eatz',
+        href: 'https://eats.biz/yujo',
+      },
+    ],
   },
 ]
