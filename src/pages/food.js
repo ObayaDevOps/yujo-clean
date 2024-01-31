@@ -31,9 +31,9 @@ export default function FoodMenu() {
         <Navbar />
 
         <object data="yujo_food_menu.pdf" type="application/pdf" frameBorder="0" width="100%" height="100%" >
-            <embed src="https://drive.google.com/file/d/1yaYBi6NA20U1zyoRvqsX5840TmfFusL9/preview?usp=sharing" width="100%" height="1200px"/> 
+            {/* <embed src="https://drive.google.com/file/d/1yaYBi6NA20U1zyoRvqsX5840TmfFusL9/preview?usp=sharing" width="100%" height="1200px"/>  */}
         
-            {/* <embed src="../../public/pdf/yujo-food.pdf" width="100%" height="1200px"/>  */}
+            <embed src="https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1706598721/yujo-food.pdf" width="100%" height="1200px"/> 
         </object>  
       </Box>      
     )
