@@ -4,7 +4,6 @@ import { ChakraProvider } from '@chakra-ui/react'
 
 //fonts - https://github.com/chakra-ui/chakra-ui/discussions/7235
 import { Poor_Story,Permanent_Marker, Jost } from 'next/font/google'
-import Navbar from '../components/navbar'
 import Footer from '../components/footer' 
 
 
@@ -28,7 +27,6 @@ const theme = extendTheme({
 export default function App({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
-      {/* <Navbar /> */}
       <Component {...pageProps} />
       <Footer />
     </ChakraProvider>

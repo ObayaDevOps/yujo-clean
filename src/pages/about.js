@@ -1,7 +1,6 @@
 import { Heading, Text, Box,Center} from '@chakra-ui/react'
 // import NextImage from 'next/image'
 
-import Navbar from '../components/navbar'
 import { getCloudinaryImage, getCloudinaryImageBlur } from '../util/cloudinaryImageRetreival';
 import Image from 'next/image'
 

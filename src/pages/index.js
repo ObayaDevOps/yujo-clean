@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { Box} from '@chakra-ui/react'
 import { getCloudinaryImage, getCloudinaryImageBlur } from '../util/cloudinaryImageRetreival';
 
-import Navbar from '../components/navbar'
 import SideBar from '../components/sidebar'
 
 import NextLink from 'next/link'
@@ -20,10 +19,6 @@ export default function Home() {
       </Head>
       
       <Box bg={'red.600'} minH={'98vh'} >
-
-        {/* <Box>
-          <Navbar />
-        </Box> */}
 
         <Box>
           <SideBar />
