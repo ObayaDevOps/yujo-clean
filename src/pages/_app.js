@@ -13,14 +13,14 @@ import Footer from '../components/footer'
 import { extendTheme } from '@chakra-ui/react'
 
 const headingFont = Permanent_Marker({ subsets: [ 'latin' ], weight: ['400'] })
-const bubblyNavBarFont = Jost({ subsets: [ 'latin' ], weight: ['400'] })
+const navBarFont = Jost({ subsets: [ 'latin' ], weight: ['400'] })
 const bodyFont = Poor_Story({ subsets: [ 'latin' ], weight: ['400'] })
 
 const theme = extendTheme({
   fonts: {
     headingFont: headingFont.style.fontFamily,
     bodyFont: bodyFont.style.fontFamily,
-    bubblyNavBarFont: bubblyNavBarFont.style.fontFamily
+    navBarFont: navBarFont.style.fontFamily
   },
 })
 

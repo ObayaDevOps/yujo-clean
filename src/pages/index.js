@@ -7,6 +7,8 @@ import { Heading, Text, Box,AbsoluteCenter, Container, VStack, SimpleGrid, Cente
 import { getCloudinaryImage, getCloudinaryImageBlur } from '../util/cloudinaryImageRetreival';
 
 import Navbar from '../components/navbar'
+import SideBar from '../components/sidebar'
+
 import NextLink from 'next/link'
 
 
@@ -25,9 +27,14 @@ export default function Home() {
       
       <Box bg={'red.600'} minH={'98vh'} >
 
-        <Box>
+        {/* <Box>
           <Navbar />
+        </Box> */}
+
+        <Box>
+          <SideBar />
         </Box>
+
 
         <Box position='relative' >
         {/* <AbsoluteCenter mt={{base: 40, md: 0}}> */}
@@ -37,7 +44,7 @@ export default function Home() {
             <Image
               // src={getCloudinaryImage('yujo9.svg')} 
               src={getCloudinaryImage('yujo9.svg')} 
-
+              
               alt="Yujo Brand Logo"
               width={250}
               height= {250}

@@ -95,14 +95,14 @@ import {
 
                 <Stack marginLeft='auto' marginRight='0' pb={2}>
                   <Text
-                  fontFamily={'bubblyNavBarFont'}
+                  fontFamily={'navBarFont'}
                   fontSize={'sm'}
                   color={'white'}
                   >
                   +256 708 109856
                   </Text>
                   <Text
-                  fontFamily={'bubblyNavBarFont'}
+                  fontFamily={'navBarFont'}
                   fontSize={'sm'}
                   color={'white'}
 
