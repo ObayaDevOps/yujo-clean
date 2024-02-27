@@ -14,7 +14,7 @@ import SideBar from '../components/sidebar'
         <Head>
           <title>Drinks Menu | Yujo Izakaya</title>
           <meta name="description" content="Yujo Izakaya | Japanese Restaurant" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/yujo_icon.svg" />
         </Head>
         <Box mb='-10'>
           <SideBar />

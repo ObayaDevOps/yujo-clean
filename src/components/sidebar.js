@@ -2,56 +2,29 @@
 
 import React, { ReactNode } from 'react'
 import {
-  IconButton,
   Box,
-  CloseButton,
   Flex,
-  Icon,
-  useColorModeValue,
   Text,
   Drawer,
   DrawerContent,
   useDisclosure,
-  BoxProps,
-  Stack,
-  Tooltip,
-  useClipboard,
-  FlexProps,
 } from '@chakra-ui/react'
 
 import {
   HamburgerIcon,
   CloseIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
 } from '@chakra-ui/icons'
 
 
-import {
-  FiMenu,
-} from 'react-icons/fi'
 
 import { PiBowlFoodLight } from "react-icons/pi";
 import { GiSewingMachine } from "react-icons/gi";
 import { FaCameraRetro } from "react-icons/fa";
 import { GiBeerBottle } from "react-icons/gi";
-import { VscLaw } from "react-icons/vsc";
-import { FaCat } from "react-icons/fa";
-import { BsBasketFill } from "react-icons/bs";
-import { GiMountaintop } from "react-icons/gi";
+
 import { GiEarthAfricaEurope } from "react-icons/gi";
 import { GiColombianStatue } from "react-icons/gi";
 
-import { GiStakeHammer } from "react-icons/gi";
-
-
-
-
-import { FaInstagram } from 'react-icons/fa';
-import { FaFacebook } from 'react-icons/fa';
-
-import { HiOutlineMail } from 'react-icons/hi';  
-import { RiMapPinLine } from "react-icons/ri";
 
 
 const LinkItems = [
@@ -59,7 +32,7 @@ const LinkItems = [
   { name: 'Food Menu', icon: GiSewingMachine, href: '/food' },
   { name: 'Drinks Menu', icon: GiEarthAfricaEurope, href: '/drinks' },
   { name: 'About', icon: FaCameraRetro, href: '/about' },
-  { name: 'Book a Table', icon: VscLaw, href: 'https://www.linkedin.com/company/silicon-advocates/' },
+  // { name: 'Book a Table', icon: VscLaw, href: 'https://www.linkedin.com/company/silicon-advocates/' },
   { name: 'Order Online - Glovo', icon: GiBeerBottle, href: 'https://glovoapp.com/ug/en/kampala/yujo-izakaya-kpa/' },
   { name: 'Order Online - Eatz', icon: GiColombianStatue, href: 'https://eats.biz/yujo' },
   // { name: 'Book a Table', icon: VscLaw, href: 'https://www.linkedin.com/company/silicon-advocates/' },

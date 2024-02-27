@@ -1,5 +1,4 @@
-import { useToast, Box } from '@chakra-ui/react'
-import { useEffect } from "react";
+import { Box } from '@chakra-ui/react'
 
 import Navbar from '../components/navbar'
 import SideBar from '../components/sidebar'
@@ -18,7 +17,7 @@ export default function FoodMenu() {
           <title>Food Menu | Yujo Izakaya</title>
           <meta name="description" content="Yujo Izakaya | Japanese Restaurant" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/yujo_icon.svg" />
         </Head>
 
         <Box mb='-10'>

@@ -1,4 +1,4 @@
-import { Heading, Flex,Stack, HStack, Text, Box,AbsoluteCenter, Container, VStack, SimpleGrid, Center, Button, AspectRatio, Alert, AlertIcon, useToast, useColorModeValue } from '@chakra-ui/react'
+import { Heading, Text, Box,Center} from '@chakra-ui/react'
 // import NextImage from 'next/image'
 
 import Navbar from '../components/navbar'
@@ -17,43 +17,21 @@ import SideBar from '../components/sidebar'
 
 export default function AboutUs() {
     return (
-        // <Box bgColor={'red.600'} height={'100vh'}>
-        //     <Navbar />
-        //     <Box bgImage={{src=getCloudinaryImage('fishBoyz.png')} }>
-        //         <Image
-        //         src={getCloudinaryImage('fishBoyz.png')} 
-        //         alt="Yujo Brand Logo"
-        //         width={0}
-        //         height= {0}
-        //         sizes='100vw'
-        //         style={{ width: '100%', height:'auto'}}
-        //         priority
-        //         placeholder="blur"
-                
-        //         blurDataURL={getCloudinaryImageBlur('fishBoyz')}
-        //         />
-        //     </Box>
-        //     <Heading>
-        //         About Us
-        //     </Heading>
-        // </Box>
 
         <Box bgColor={'blackAlpha.900'} >
             <Head>
                 <title>About Us | Yujo Izakaya</title>
                 <meta name="description" content="About Yujo Izakaya" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/yujo_icon.svg" />
             </Head>
 
 
             <Box 
                 minHeight='100vh'
-                // bgColor={'red.50'} 
                 bgSize="cover" 
                 bgPosition="center" 
                 bgAttachment="fixed" 
-                // backgroundImage={{base: '../../public/backgrounds/fishBoyz.png'}}
                 backgroundImage={'../../../backgrounds/fishBoyz.png'}
             >
             <Box>
