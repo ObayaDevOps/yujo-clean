@@ -57,11 +57,12 @@ import { RiMapPinLine } from "react-icons/ri";
 const LinkItems = [
   { name: 'Home', icon: PiBowlFoodLight, href: '/#' },
   { name: 'Food Menu', icon: GiSewingMachine, href: '/food' },
-  { name: 'Drinks Menu', icon: GiEarthAfricaEurope, href: 'https://www.afropocene.com/' },
+  { name: 'Drinks Menu', icon: GiEarthAfricaEurope, href: '/drinks' },
   { name: 'About', icon: FaCameraRetro, href: '/about' },
+  { name: 'Book a Table', icon: VscLaw, href: 'https://www.linkedin.com/company/silicon-advocates/' },
   { name: 'Order Online - Glovo', icon: GiBeerBottle, href: 'https://glovoapp.com/ug/en/kampala/yujo-izakaya-kpa/' },
   { name: 'Order Online - Eatz', icon: GiColombianStatue, href: 'https://eats.biz/yujo' },
-  { name: 'Book a Table', icon: VscLaw, href: 'https://www.linkedin.com/company/silicon-advocates/' },
+  // { name: 'Book a Table', icon: VscLaw, href: 'https://www.linkedin.com/company/silicon-advocates/' },
 
 ]
 
@@ -163,7 +164,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
       px={{ base: 4 }}
       height="20"
       alignItems="center"
-      // bg={'red.600'}
+      bg={'red.600'}
       justifyContent="flex-start"
       {...rest}>
 
