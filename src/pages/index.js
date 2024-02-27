@@ -16,9 +16,7 @@ export default function Home() {
       <Head>
         <title>Yujo Izakaya</title>
         <meta name="description" content="Yujo Izakaya | Japanese Restaurant" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/yujo_icon.svg" />
-        
       </Head>
       
       <Box bg={'red.600'} minH={'98vh'} >

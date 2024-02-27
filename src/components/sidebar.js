@@ -28,13 +28,13 @@ import { GiColombianStatue } from "react-icons/gi";
 
 
 const LinkItems = [
-  { name: 'Home', icon: PiBowlFoodLight, href: '/#' },
-  { name: 'Food Menu', icon: GiSewingMachine, href: '/food' },
-  { name: 'Drinks Menu', icon: GiEarthAfricaEurope, href: '/drinks' },
-  { name: 'About', icon: FaCameraRetro, href: '/about' },
+  { name: 'Home', href: '/#' },
+  { name: 'Food Menu', href: '/food' },
+  { name: 'Drinks Menu',  href: '/drinks' },
+  { name: 'About',  href: '/about' },
   // { name: 'Book a Table', icon: VscLaw, href: 'https://www.linkedin.com/company/silicon-advocates/' },
-  { name: 'Order Online - Glovo', icon: GiBeerBottle, href: 'https://glovoapp.com/ug/en/kampala/yujo-izakaya-kpa/' },
-  { name: 'Order Online - Eatz', icon: GiColombianStatue, href: 'https://eats.biz/yujo' },
+  { name: 'Order Online - Glovo', href: 'https://glovoapp.com/ug/en/kampala/yujo-izakaya-kpa/' },
+  { name: 'Order Online - Eatz', href: 'https://eats.biz/yujo' },
   // { name: 'Book a Table', icon: VscLaw, href: 'https://www.linkedin.com/company/silicon-advocates/' },
 
 ]
@@ -86,7 +86,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
         </Flex>
         <Box mt={12}>
           {LinkItems.map((link) => (
-            <NavItem key={link.name} icon={link.icon} href={link.href}>
+            <NavItem key={link.name} href={link.href}>
               {link.name}
             </NavItem>
           ))}
