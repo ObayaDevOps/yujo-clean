@@ -89,9 +89,9 @@ const SidebarContent = ({ onClose, ...rest }) => {
         
         </Flex> */}
         <Box mt={12}>
-        <Flex h={{base:"16", md: "24",lg:"10"}} alignItems="center" mx="8" justifyContent="space-between" pb={8}>
-          <CloseIcon w={7} h={7} mt={{base:2, lg: 10}} color={'white'} onClick={onClose} mt={{base: 6}} />
-        </Flex>
+          <Flex h={{base:"16", md: "24",lg:"10"}} alignItems="center" mx="8" justifyContent="space-between" pb={8}>
+            <CloseIcon w={7} h={7} mt={{base:2, lg: 10}} color={'white'} onClick={onClose} mt={{base: 6}} />
+          </Flex>
           
           {LinkItems.map((link) => (
             <NavItem key={link.name} href={link.href}>
@@ -157,7 +157,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
         aria-label="open menu"
         icon={<FiMenu />}
       /> */}
-      <Box pt={4}>
+      <Box p={{base:2, md:4}}>
         <HamburgerIcon 
           w={8} 
           h={8}
