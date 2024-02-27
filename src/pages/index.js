@@ -20,6 +20,7 @@ export default function Home() {
         <meta name="description" content="Yujo Izakaya | Japanese Restaurant" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        
       </Head>
       
       <Box bg={'red.600'} minH={'98vh'} >
@@ -40,9 +41,8 @@ export default function Home() {
               alt="Yujo Brand Logo"
               width={250}
               height= {250}
-              priority
+              priority={true}
               placeholder="blur"
-              
               blurDataURL={getCloudinaryImageBlur('yujo9.svg')}
               />
               

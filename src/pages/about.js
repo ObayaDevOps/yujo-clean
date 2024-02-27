@@ -75,8 +75,8 @@ export default function AboutUs() {
 
 
 
-            <Box>
-                <Center p={{sm:10 , md:10}} flex='1' my={20}>
+            <Box minHeight='85vh' pb={24}>
+                <Center p={{sm:10 , md:10}} flex='1' mt={{base:32, md:64, lg: 32}} mb={{base:24}}>
                     <Heading
                     as='h2'
                     size='4xl'
@@ -90,14 +90,14 @@ export default function AboutUs() {
                     
                 </Center>
 
-                <Center px={{base:16 , md:24}} flex='1' >
+                <Center px={{base:16 ,md:20, lg:64}} flex='1' >
                         <Box px={{md:24}}>
                             <Text 
-                            fontFamily={'bodyFont'} 
+                            fontFamily={'bubblyNavBarFont'} 
                             fontSize={{base:'3xl',md:'4xl'}}
                             color={'whiteAlpha.800'}
                             textAlign='center'
-                            pb={4}
+                            pb={{base:6, md: 6}}
                             >
                             Laid-back vibes of California sunshine meet the vibrant rhythm of Ugandan flavors. 
                             </Text>
@@ -107,25 +107,11 @@ export default function AboutUs() {
                             color={'whiteAlpha.800'}
                             textAlign='center'
                             >
-                                We take traditional Japanese dishes and give them a Californian twist, using fresh, seasonal ingredients sourced from local markets and farms around Uganda. 
+                                We take traditional Japanese dishes and give them a West-Coast twist, using fresh, seasonal ingredients sourced from local markets and farms around Uganda. 
                             </Text>
                         </Box>
-
                 </Center>
-                
-                <Box pt={12} >
-                            <Image
-                                src={getCloudinaryImage('sushi.png')} 
-                                alt="Yujo Brand Logo"
-                                width={0}
-                                height= {0}
-                                sizes='100vw'
-                                style={{ width: '100%', height:'auto'}}
-                                priority
-                                placeholder="blur"
-                                blurDataURL={getCloudinaryImageBlur('sushi.png')}
-                                />
-                 </Box>
+            
             </Box>
 
         </Box>

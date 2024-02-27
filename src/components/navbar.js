@@ -254,12 +254,17 @@ const NAV_ITEMS = [
 
   },
   {
+    label: 'Food Menu JPG',
+    href: '/food_jpg',
+
+  },
+  {
     label: 'About',
     href: '/about',
 
   },
   {
-    label: 'Order from Us',
+    label: 'Order Online',
     children: [
       {
         label: 'Glovo',
