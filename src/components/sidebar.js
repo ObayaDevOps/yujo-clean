@@ -1,6 +1,6 @@
 'use client'
 
-import React, { ReactNode } from 'react'
+import React, { ReactNode, useRef } from 'react'
 import {
   Box,
   Flex,
@@ -41,6 +41,8 @@ const LinkItems = [
 
 export default function SimpleSidebar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const initialRef = useRef();
+
   return (
     <Box>
       <SidebarContent onClose={() => onClose} display={{ base: 'none', lg: 'none' }} />
@@ -50,6 +52,9 @@ export default function SimpleSidebar() {
         onClose={onClose}
         returnFocusOnClose={false}
         onOverlayClick={onClose}
+        // initialFocusRef={initialRef}
+        _focus={{ border: 'none' }}
+        trapFocus='false'
         size="full">
         <DrawerContent>
           <SidebarContent onClose={onClose} />
@@ -79,12 +84,15 @@ const SidebarContent = ({ onClose, ...rest }) => {
         top='0'
         bottom='20'
         {...rest}>
-        <Flex h={{base:"16", md: "24",lg:"10"}} alignItems="center" mx="8" justifyContent="space-between">
-          {/* <CloseButton display={{ base: 'flex'}} onClick={onClose} color='white' size='9xl' mt={{lg:20}} /> */}
+        {/* <Flex h={{base:"16", md: "24",lg:"10"}} alignItems="center" mx="8" justifyContent="space-between">
           <CloseIcon w={7} h={7} mt={{base:2, lg: 10}} color={'white'} onClick={onClose} mt={{base: 6}} />
         
-        </Flex>
+        </Flex> */}
         <Box mt={12}>
+        <Flex h={{base:"16", md: "24",lg:"10"}} alignItems="center" mx="8" justifyContent="space-between" pb={8}>
+          <CloseIcon w={7} h={7} mt={{base:2, lg: 10}} color={'white'} onClick={onClose} mt={{base: 6}} />
+        </Flex>
+          
           {LinkItems.map((link) => (
             <NavItem key={link.name} href={link.href}>
               {link.name}
@@ -102,16 +110,15 @@ const NavItem = ({ icon, href, children, ...rest }) => {
   return (
     <Box
       as="a"
-      href={href}
-      style={{ textDecoration: 'none' }}
-      _focus={{ boxShadow: 'none' }}>
+      href={href}>
       <Flex
         align="center"
         p="4"
         mx="4"
         borderRadius="lg"
-        role="group"
-        cursor="pointer"
+        borderColor='green'
+        // role="group"
+        // cursor="pointer"
         _hover={{
           bg: 'red.700',
           color: 'white',
@@ -121,7 +128,7 @@ const NavItem = ({ icon, href, children, ...rest }) => {
         <Text 
         fontFamily={'navBarFont'}
         color='white'
-        fontSize={{base:'xl',md:'xl', lg: '4xl'}}
+        fontSize={{base:'2xl',md:'4xl', lg: '4xl'}}
         >
           {children}
         </Text>
@@ -133,7 +140,7 @@ const NavItem = ({ icon, href, children, ...rest }) => {
 const MobileNav = ({ onOpen, ...rest }) => {
   return (
     <Flex
-      ml={{ base: 0 }}
+      ml={{ base: 2 }}
       px={{ base: 4 }}
       height="20"
       alignItems="center"
@@ -150,14 +157,15 @@ const MobileNav = ({ onOpen, ...rest }) => {
         aria-label="open menu"
         icon={<FiMenu />}
       /> */}
+      <Box pt={4}>
+        <HamburgerIcon 
+          w={8} 
+          h={8}
+          aria-label="open menu" 
+          onClick={onOpen}
 
-      <HamburgerIcon 
-        w={8} 
-        h={8}
-        aria-label="open menu" 
-        onClick={onOpen}
-
-        color={'white'} />
+          color={'white'} />
+        </Box>
 
     </Flex>
   )

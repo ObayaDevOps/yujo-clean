@@ -28,7 +28,7 @@ export default function Home() {
         <Box position='relative' >
         {/* <AbsoluteCenter mt={{base: 40, md: 0}}> */}
         <Box position='absolute' top='80%' left='50%'
-          transform={{base:'translate(-50%, 25vh)', md:'translate(-50%, 20vh)'}}  >
+          transform={{base:'translate(-50%, 15vh)', md:'translate(-50%, 20vh)'}}  >
           <NextLink href='/about'>
             <Image
               // src={getCloudinaryImage('yujo9.svg')} 
