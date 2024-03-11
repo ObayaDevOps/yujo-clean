@@ -16,7 +16,9 @@ export default function Home() {
         <title>Yujo Izakaya: Japanese Kitchen and Cocktail bar with some West Coast Flare</title>
         <meta name="description" content="Japanese Kitchen and Cocktail bar with some West Coast Flare" />
         <meta property="og:title" content="Yujo Izakaya" />
-        <meta property="og:image" content="https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1704902684/yujo4.svg" />
+        <meta property="og:image" content="https://res.cloudinary.com/medoptics-image-cloud/image/upload/v1710195209/yujo4_eaxmbe.png" />
+        <meta property="og:url" content="https://www.yujo.ug/" />
+
 
         <link rel="icon" href="/yujo_icon.svg" />
       </Head>
