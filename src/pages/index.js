@@ -13,10 +13,15 @@ export default function Home() {
   return (
     <Box >
       <Head>
-        <title>Yujo Izakaya</title>
-        <meta name="description" content="Yujo Izakaya | Japanese Restaurant" />
+        <title>Yujo Izakaya: Japanese Kitchen and Cocktail bar with some West Coast Flare</title>
+        <meta name="description" content="Yujo Izakaya | Japanese Kitchen and Cocktail bar with some West Coast Flare" />
+        <meta property="og:title" content="Yujo Izakaya" />
+        <meta property="og:image" content="https://res.cloudinary.com/medoptics-image-cloud/image/upload/c_pad,w_50,h_89,ar_9:16/v1706709313/nekosero5.png" />
+
         <link rel="icon" href="/yujo_icon.svg" />
       </Head>
+
+    
       
       <Box bg={'red.600'} minH={'98vh'} >
 
