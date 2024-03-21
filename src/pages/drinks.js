@@ -9,7 +9,7 @@ import SideBar from '../components/sidebar'
   export default function DrinksMenu() {
 
     return (
-      <Box>
+      <Box bg={'red.600'} >
         <Head>
           <title>Drinks Menu | Yujo Izakaya</title>
           <meta name="description" content="Yujo Izakaya | Japanese Restaurant" />

@@ -144,7 +144,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
       px={{ base: 4 }}
       height="20"
       alignItems="center"
-      bg={'red.600'}
+      // bg={'red.600'}
       justifyContent="flex-start"
       {...rest}>
 
