@@ -9,7 +9,7 @@ import Footer from '../components/footer'
 import { extendTheme } from '@chakra-ui/react'
 
 //https://medium.com/@keeganfamouss/accessibility-on-demand-with-chakra-ui-and-focus-visible-19413b1bc6f9
-import { Global, css } from '@emotion/core'
+import { Global, css } from '@emotion/react'
 const GlobalStyles = css`
   /*
     This will hide the focus indicator if the element receives focus    via the mouse,
