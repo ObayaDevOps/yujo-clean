@@ -8,6 +8,9 @@ import SideBar from '../components/sidebar'
 
 import NextLink from 'next/link'
 
+import 'focus-visible/dist/focus-visible';
+
+
 
 export default function Home() {
   return (
