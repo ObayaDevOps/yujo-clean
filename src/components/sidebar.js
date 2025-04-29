@@ -41,7 +41,9 @@ const LinkItems = [
 
 export default function SimpleSidebar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const initialRef = useRef();
+  // const initialRef = useRef();
+    const drawerContentRef = useRef(null);
+
 
   return (
     <Box>
@@ -52,11 +54,13 @@ export default function SimpleSidebar() {
         onClose={onClose}
         returnFocusOnClose={false}
         onOverlayClick={onClose}
+        initialFocusRef={drawerContentRef}
+
         // initialFocusRef={initialRef}
         _focus={{ border: 'none' }}
         trapFocus='false'
         size="full">
-        <DrawerContent>
+        <DrawerContent ref={drawerContentRef}>
           <SidebarContent onClose={onClose} />
         </DrawerContent>
       </Drawer>
@@ -90,7 +94,10 @@ const SidebarContent = ({ onClose, ...rest }) => {
         </Flex> */}
         <Box mt={12}>
           <Flex h={{base:"16", md: "24",lg:"10"}} alignItems="center" mx="8" justifyContent="space-between" pb={8}>
-            <CloseIcon w={7} h={7} mt={{base:2, lg: 10}} color={'white'} onClick={onClose} mt={{base: 6}} />
+            <CloseIcon w={7} h={7} mt={{base:2, lg: 10}} color={'white'} onClick={onClose} 
+            //mt={{base: 6}}
+            
+            />
           </Flex>
           
           {LinkItems.map((link) => (
