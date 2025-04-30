@@ -16,7 +16,7 @@ import SideBar from '../components/sidebar'
           <link rel="icon" href="/yujo_icon.svg" />
         </Head>
         <Box mb='-10'>
-          <SideBar />
+          <SideBar  showNavIcon={true} />
         </Box>
         
         <object data="yujo_drinks_menu.pdf" type="application/pdf" frameborder="0" width="100%" height="100%" >

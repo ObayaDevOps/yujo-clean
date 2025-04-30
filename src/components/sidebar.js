@@ -8,6 +8,7 @@ import {
   Drawer,
   DrawerContent,
   useDisclosure,
+  IconButton
 } from '@chakra-ui/react'
 
 import {
@@ -15,6 +16,9 @@ import {
   CloseIcon,
 } from '@chakra-ui/icons'
 
+
+import NextImage from 'next/image'
+import { getCloudinaryImage, getCloudinaryImageBlur } from '../util/cloudinaryImageRetreival';
 
 
 import { PiBowlFoodLight } from "react-icons/pi";
@@ -39,7 +43,7 @@ const LinkItems = [
 
 ]
 
-export default function SimpleSidebar() {
+export default function SimpleSidebar(props) {
   const { isOpen, onOpen, onClose } = useDisclosure()
   // const initialRef = useRef();
     const drawerContentRef = useRef(null);
@@ -65,7 +69,7 @@ export default function SimpleSidebar() {
         </DrawerContent>
       </Drawer>
       {/* mobilenav */}
-      <MobileNav display={{ base: 'flex', lg:'flex' }} onOpen={onOpen} />
+      <MobileNav display={{ base: 'flex', lg:'flex' }} onOpen={onOpen} showNavIcon={props.showNavIcon} />
       <Box ml={{ base: 0, lg: 0 }} p="4">
         {/* Content */}
         
@@ -94,7 +98,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
         </Flex> */}
         <Box mt={12}>
           <Flex h={{base:"16", md: "24",lg:"10"}} alignItems="center" mx="8" justifyContent="space-between" pb={8}>
-            <CloseIcon w={7} h={7} mt={{base:2, lg: 10}} color={'white'} onClick={onClose} 
+            <CloseIcon w={7} h={7} mt={{base:-6, md: -4}} color={'white'} onClick={onClose} 
             //mt={{base: 6}}
             
             />
@@ -144,7 +148,7 @@ const NavItem = ({ icon, href, children, ...rest }) => {
   )
 }
 
-const MobileNav = ({ onOpen, ...rest }) => {
+const MobileNav = ({ onOpen, showNavIcon, ...rest }) => {
   return (
     <Flex
       ml={{ base: 0 }}
@@ -155,24 +159,42 @@ const MobileNav = ({ onOpen, ...rest }) => {
       justifyContent="flex-start"
       {...rest}>
 
-      {/* <IconButton
+      <IconButton
         variant="ghost"
         color='white' 
-        size='6xl' 
+        size='lg' 
+        // w={8} 
+        // h={8}
         // mt={{lg:20}}
         onClick={onOpen}
         aria-label="open menu"
-        icon={<FiMenu />}
-      /> */}
-      <Box p={{base:2, md:4}}>
-        <HamburgerIcon 
-          w={8} 
-          h={8}
-          aria-label="open menu" 
-          onClick={onOpen}
+        icon={<HamburgerIcon  w={8} h={8} />}
+        p={{base: 2, md: 6}}
+        mb={2}
+        rounded='none'
+        _hover={{
+          transform: 'scale(1.1)',
+        }}
+      />
 
-          color={'white'} />
-        </Box>
+        { showNavIcon && (
+            
+        
+            <Flex flex={{ base: 1 }} ml={{base: -12, md:-16}} mb={2} justify={{ base: 'center' }}>
+            <Box 
+            // as='a' href='/#'
+            >
+                <NextImage
+                  // src={"/neko-logo.svg"} 
+                  src={getCloudinaryImage('yujo5-cropped-cropped_jnum1y.svg')} 
+                  height={50} width={50}
+                  alt={'Yujo logo'}
+        
+                ></NextImage>
+              </Box>
+              </Flex>
+  
+        )}
 
     </Flex>
   )

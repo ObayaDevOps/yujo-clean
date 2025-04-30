@@ -34,7 +34,7 @@ export default function AboutUs() {
                 backgroundImage={'../../../backgrounds/fishBoyz.png'}
             >
             <Box>
-                <SideBar />
+                <SideBar showNavIcon={true} />
             </Box>
 
                 <Center p={{sm:1 , md:10}} >

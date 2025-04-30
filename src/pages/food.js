@@ -20,7 +20,7 @@ export default function FoodMenu() {
         </Head>
 
         <Box mb='-10'>
-          <SideBar />
+          <SideBar showNavIcon={true} />
         </Box>
 
         {/* <Spinner /> */}
